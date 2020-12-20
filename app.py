@@ -25,7 +25,7 @@ def game_app():
     score_list = Game.last_and_best_score()
     canvas.delete(last_score)
     canvas.delete(record)
-    last_score = canvas.create_text(250, 160, text=f'Вас прошлый счёт: {score_list[0]}', font=(FONT_STYLE, FONT_SIZE), fill=MENU_TEXT_COLOR)
+    last_score = canvas.create_text(250, 160, text=f'Ваш прошлый счёт: {score_list[0]}', font=(FONT_STYLE, FONT_SIZE), fill=MENU_TEXT_COLOR)
     record = canvas.create_text(250, 210, text=f'Рекорд: {score_list[1]}', font=(FONT_STYLE, FONT_SIZE), fill=MENU_TEXT_COLOR)
 
 bg = ImageTk.PhotoImage(Image.open('menu_bg.jpg').resize((WIDTH, HEIGHT)))
@@ -37,7 +37,7 @@ start_button_window = canvas.create_window(190, 100, anchor=NW, window=start_but
 
 score_list = Game.last_and_best_score()
 
-last_score = canvas.create_text(250, 160, text=f'Вас прошлый счёт: {score_list[0]}', font=(FONT_STYLE, FONT_SIZE), fill=MENU_TEXT_COLOR)
+last_score = canvas.create_text(250, 160, text=f'Ваш прошлый счёт: {score_list[0]}', font=(FONT_STYLE, FONT_SIZE), fill=MENU_TEXT_COLOR)
 record = canvas.create_text(250, 210, text=f'Рекорд: {score_list[1]}', font=(FONT_STYLE, FONT_SIZE), fill=MENU_TEXT_COLOR)
 
 canvas.pack()
